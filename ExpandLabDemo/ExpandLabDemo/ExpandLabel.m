@@ -54,7 +54,7 @@ static CGFloat SpaceY = 10.0f;
     
     [self addSubview:_desLab];
     
-    CGSize desLabSize = [text boundingRectWithSize:CGSizeMake(_desLab.frame.size.width, 1000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:_desLab.font} context:nil].size;
+    CGSize desLabSize = [text boundingRectWithSize:CGSizeMake(_desLab.frame.size.width, 1000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading  attributes:@{NSFontAttributeName:_desLab.font} context:nil].size;
 
     _desLab.text = [NSString stringWithFormat:@"\t%@",text];
     [_desLab sizeToFit];
@@ -68,7 +68,7 @@ static CGFloat SpaceY = 10.0f;
     //最小可展开的高度
     CGSize limitHForExpandSize = [simulateStr boundingRectWithSize:CGSizeMake(_desLab.frame.size.width, 1000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:_desLab.font} context:nil].size;
     
-    if (desLabSize.height > limitHForExpandSize.height) {
+    if (ceilf(desLabSize.height) > limitHForExpandSize.height) {
         NSLog(@"--可展开");
         self.expandBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - 40 - SpaceX, _desLab.frame.size.height + _desLab.frame.origin.y + SpaceY, 40, 20)];
 

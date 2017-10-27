@@ -74,7 +74,7 @@
             [weakSelf updateUI];
         }];
     } else {
-        [expandLab setLabelText:@"放大发发看房看房卡难看啦女阿卡拉萨路那边那把大把大神了奥德赛吧是不是把那边艾斯比啊是\n\ndafa放大发发看房看房卡难看啦女阿卡拉萨路那边那把大把大神了奥德赛吧是不是把那边艾斯比啊是\n\ndafa放大发发看房看房卡难看啦女阿卡拉萨路那边那把大把大神了奥德赛吧是不是把那边艾斯比啊是\n\ndafa放大发发看房看房卡难看啦女阿卡拉萨路那边那把大把大神了奥德赛吧是不是把那边艾斯比啊是\n\ndafa" expandBlock:^{
+        [expandLab setLabelText:@"With in-depth panel discussions on domestic and global news and current affairs, Today gives you the story behind the headlines." expandBlock:^{
             
             //点击展开 界面重新布局
             [weakSelf updateUI];
